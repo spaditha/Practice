@@ -1,4 +1,24 @@
+# Calculate context resultant of the word “dog” use self-attention/
+  #          “the dog ran”
 
+   #         the:  query: [1, 1, 1]
+    #                key:  [2, 0, 1]
+     #               value: [2, 0, 0]
+                
+      #      dog: query: [0, 1, 1]
+       #             key:  [1, 1, 2]
+        #            value: [1, 0, 1]
+
+         #    ran: query: [1, 0, 0]
+          #           key: [1, 1, 1]
+           #          value:[1,0,2]
+            
+    #        Options :
+  #[2.19, 1, 1.15] 
+  #[1.09, 0, 1.15] 
+  #[2.19, 0, 2.53] 
+  #[1.09, 0, 2.53] 
+#---------------------------------------------#
 import torch
 
 x = [
